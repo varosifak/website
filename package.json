@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "David Polynar <Polynar.david@gmail.com>",
+  "license": "CC-BY-NC-SA-4.0",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
