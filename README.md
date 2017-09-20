@@ -1,6 +1,6 @@
-# egh-varosi-fak
+# EGH városi fák web
 
-> A Vue.js project
+> Az EGH Városi fák projekt webes kezelőfelülete (SPA)
 
 ## Build Setup
 
@@ -19,9 +19,6 @@ npm run build --report
 
 # run unit tests
 npm run unit
-
-# run e2e tests
-npm run e2e
 
 # run all tests
 npm test
