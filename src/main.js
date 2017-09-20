@@ -3,28 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueMaterial from 'vue-material'
-
-require('vue-material/dist/vue-material.css')
+import Vuetify from 'vuetify'
 
 Vue.config.productionTip = false
 
-Vue.use(VueMaterial)
+Vue.use(Vuetify)
 
-Vue.material.registerTheme({
-  default: {
-    primary: 'blue',
-    accent: 'red'
-  },
-  green: {
-    primary: 'green',
-    accent: 'pink'
-  },
-  orange: {
-    primary: 'orange',
-    accent: 'green'
-  }
-})
+import('../node_modules/vuetify/dist/vuetify.min.css')
 
 /* eslint-disable no-new */
 new Vue({
