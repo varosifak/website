@@ -18,6 +18,6 @@ jobs:
       node_js: "7"
       deploy:
         provider: script
-        script: scripts/deploy.sh
+        script: echo "Deploying"
         on:
           branch: master
