@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "node"
+
+cache:
+  directories:
+    - "node_modules"
+
+jobs:
+  include:
+    - stage: eslint
+      script: npm run lint
+
+    - stage: unittest
+      script: npm test
+
+    - stage: deploy
+      node_js: "7"
+      script: echo "Deploying"
+      deploy:
+        provider: script
+        script: scripts/deploy.sh
+        on:
+          branch: master
