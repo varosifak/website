@@ -16,7 +16,6 @@ jobs:
 
     - stage: deploy
       node_js: "7"
-      script: echo "Deploying"
       deploy:
         provider: script
         script: scripts/deploy.sh
