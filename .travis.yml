@@ -22,7 +22,7 @@ jobs:
     - stage: Deploy
       script: skip
       deploy:
-      provider: script
+        provider: script
         script: echo "Deploying"
         on:
         branch: master
