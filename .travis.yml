@@ -15,23 +15,14 @@ stages:
 
 jobs:
   include:
-    - script: &.test1
-    - script: &.test2
+    - script: echo "Linting tests (1)"
+              npm run lint
+    - script: echo "Running unit tests (2)"
+              npm test
     - stage: Deploy
       script: skip
-      deploy: &.deploy
-
-.test1: |
-  echo "Linting tests (1)"
-  npm run lint
-
-.test2: |
-  echo "Running unit tests (2)"
-  npm test
-
-.deploy:
-        provider: script
+      deploy:
+      provider: script
         script: echo "Deploying"
         on:
-          branch: master
-
+        branch: master
