@@ -6,17 +6,32 @@ cache:
   directories:
     - "node_modules"
 
+stages:
+  - test
+  - name: deploy
+    if: branch = master
+
+
+
 jobs:
   include:
-    - stage: eslint
-      script: npm run lint
+    - script: &.test1
+    - script: &.test2
+    - stage: Deploy
+      script: skip
+      deploy: &.deploy
 
-    - stage: unittest
-      script: npm test
+.test1: |
+  echo "Linting tests (1)"
+  npm run lint
 
-    - stage: deploy
-      deploy:
+.test2: |
+  echo "Running unit tests (2)"
+  npm test
+
+.deploy:
         provider: script
         script: echo "Deploying"
         on:
           branch: master
+
