@@ -1,4 +1,4 @@
-# EGH városi fák web
+# EGH városi fák web [![Build Status](https://travis-ci.org/varosifak/website.svg?branch=travisci)](https://travis-ci.org/varosifak/website)
 
 > Az EGH Városi fák projekt webes kezelőfelülete (SPA)
 
